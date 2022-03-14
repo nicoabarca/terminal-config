@@ -1,2 +1,2 @@
 # terminal-config
-Personal Terminal Configurations
+My personal terminal configuration
