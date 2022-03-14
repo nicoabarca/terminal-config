@@ -1,0 +1,28 @@
+add_newline = true
+
+[hostname]
+ssh_only = false
+style = "bold bright-green"
+format = "[$hostname]($style):"
+
+[username]
+style_user = "bold bright-green"
+format = "[$user]($style)@"
+show_always = true
+
+[line_break]
+disabled = false
+
+[directory]
+style = "#9e32a8 bold"
+
+[git_branch]
+style = "yellow bold"
+format = "[$symbol$branch]($style) "
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold yellow) "
+
+[package]
+disabled = true
