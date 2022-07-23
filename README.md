@@ -6,4 +6,4 @@
 * **OS**: Ubuntu 20.04.3 LTS Focal Fossa
 * **Shell**: [fish](https://fishshell.com/) 
 * **Prompt**: [Starship](https://starship.rs/)
-* **Terminal**: [Hyper](https://hyper.is/) or GNOME
+* **Terminal Emultor**: GNOME Terminal

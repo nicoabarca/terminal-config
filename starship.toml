@@ -1,28 +1,48 @@
-add_newline = true
+format = """$username$hostname:$directory$git_branch$git_status $python """
 
 [hostname]
+format= "[$hostname](#DEFF00 bold)"
 ssh_only = false
-style = "bold bright-green"
-format = "[$hostname]($style):"
 
 [username]
-style_user = "bold bright-green"
+style_user = "#DEFF00 bold"
+style_root = "black bold"
 format = "[$user]($style)@"
+disabled = false
 show_always = true
 
-[line_break]
-disabled = false
+[python]
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 
-[directory]
-style = "#9e32a8 bold"
+[ruby]
+detect_variables = []
 
-[git_branch]
-style = "yellow bold"
-format = "[$symbol$branch]($style) "
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
 
 [cmd_duration]
-min_time = 500
-format = "took [$duration](bold yellow) "
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+format = " took [$duration]($style)"
 
-[package]
-disabled = true
+[directory]
+truncation_length = 2
+format = "[$path]($style)[$read_only]($read_only_style)"
+
+[git_branch]
+format = " [$symbol$branch]($style)"
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind
