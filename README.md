@@ -1,9 +1,6 @@
-# Terminal Configuration
-## My personal terminal configuration for my Ubuntu Linux machine.
----
-### What I use 
+# Dotfiles
 
-* **OS**: Ubuntu 20.04.3 LTS Focal Fossa
-* **Shell**: [fish](https://fishshell.com/) 
-* **Prompt**: [Starship](https://starship.rs/)
-* **Terminal Emultor**: GNOME Terminal
+* **OS**: Ubuntu 22.04 (Jammy Jellyfish)
+* **Shell**: zsh
+* **Prompt**: starship
+* **Emulator**: GNOME Terminal
